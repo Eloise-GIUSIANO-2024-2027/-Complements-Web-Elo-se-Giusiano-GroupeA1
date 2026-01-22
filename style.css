@@ -1,19 +1,19 @@
-#bleu {
+.bleu {
     border: solid blue 2px;
 
 }
 
-#vert {
+.vert {
     border: solid green 2px;
 
 }
 
-#orange{
+.orange{
     border: solid orange 2px;
 
 }
 
-#rouge{
+.rouge{
     border: solid red 2px;
 
 }

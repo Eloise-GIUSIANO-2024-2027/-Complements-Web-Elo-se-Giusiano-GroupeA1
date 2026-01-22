@@ -30,5 +30,27 @@ function Interval(){
 }
 }
 
- var I_i = 0
-setInterval(function() {document.getElementById("temperature2").textContent = A_Tableau[I_i];  I_i++ ;}, 2000);
+var I_i = 0
+setInterval(function() {
+  document.getElementById("temperature2").textContent = A_Tableau[I_i]; 
+
+  //const div1 = document.setAttribute("temperature2");
+  const tempe = document.querySelector("temperature2");
+  //var LAPAGE = document.getElementById("temperature2");
+  //const classs = LAPAGE.getAttribute("class");
+  //classs.className = "foo";
+  if (A_Tableau[I_i] < 0){
+  tempe.setAttribute("class","bleu");
+  } else if (A_Tableau[I_i] < 20){
+  tempe.setAttribute("class","vert");
+
+  }else if (A_Tableau[I_i] < 30){
+  tempe.setAttribute("class","orange");
+
+  }else {
+  tempe.setAttribute("class","rouge");
+
+  }
+  console.log(tempe.outerHTML);
+  I_i++ ;
+}, 2000);
