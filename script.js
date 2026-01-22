@@ -1,5 +1,5 @@
 
-var A_Tableau = new Array(20); 
+var A_Tableau = new Array(); 
 
 var I_min = -10 ; 
 var I_max = 40;
@@ -12,4 +12,13 @@ for (let i = 0; i < 20 ; i++) {
   A_Tableau.push(Math.floor(NombreAleatoire(I_min, I_max)));
 }
 
-console.log(A_Tableau)
+function NombreAleatoireDansLeTableau(A_Tableau){
+  var ouais = Math.floor(Math.random() * A_Tableau.length);
+  var rValue = A_Tableau[ouais];
+  return rValue;
+}
+
+console.log(A_Tableau);
+
+const log = document.getElementById("temperature").textContent;
+document.getElementById("temperature").textContent = NombreAleatoireDansLeTableau(A_Tableau);
