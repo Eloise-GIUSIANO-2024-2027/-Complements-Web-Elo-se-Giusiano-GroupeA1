@@ -21,4 +21,14 @@ function NombreAleatoireDansLeTableau(A_Tableau){
 console.log(A_Tableau);
 
 const log = document.getElementById("temperature").textContent;
-document.getElementById("temperature").textContent = NombreAleatoireDansLeTableau(A_Tableau);
+var nombre_fixe = NombreAleatoireDansLeTableau(A_Tableau)
+document.getElementById("temperature").textContent = nombre_fixe;
+
+function Interval(){
+  for (let i = 0; i < 20 ; i++) {
+  document.getElementById("temperature2").textContent = A_Tableau[i];
+}
+}
+
+ var I_i = 0
+setInterval(function() {document.getElementById("temperature2").textContent = A_Tableau[I_i];  I_i++ ;}, 2000);
