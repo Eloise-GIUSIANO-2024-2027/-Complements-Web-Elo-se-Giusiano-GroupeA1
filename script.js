@@ -34,13 +34,15 @@ var I_i = 0
 const LATEMP = document.getElementById('temperature2');
 
 setInterval(function() {
-  document.getElementById("temperature2").textContent = A_Tableau[I_i];  
+  document.getElementById("temperature2").textContent = A_Tableau[I_i] + " dégrés";  
   if (A_Tableau[I_i] < 0){
   LATEMP.classList.add('bleu');
   LATEMP.classList.remove('orange'); 
   LATEMP.classList.remove('vert');
   LATEMP.classList.remove('rouge');
   document.getElementById("PetitePhrase").innerHTML = "Brrrrrrr, un peu froid ce matin, mets ta cagoule !"; 
+  document.getElementById("PetitePhrase").classList.remove('hidden');
+
 
 }
 else if (A_Tableau[I_i] < 20){
@@ -48,14 +50,17 @@ else if (A_Tableau[I_i] < 20){
   LATEMP.classList.remove('bleu');
   LATEMP.classList.remove('orange');
   LATEMP.classList.remove('rouge');
-  document.getElementById("PetitePhrase").innerHTML = " "; 
+  //document.getElementById("PetitePhrase").innerHTML = " "; 
+  document.getElementById("PetitePhrase").classList.add('hidden');
+
 }
 else if (A_Tableau[I_i] < 30){
   LATEMP.classList.add('orange');
   LATEMP.classList.remove('bleu');
   LATEMP.classList.remove('vert');
   LATEMP.classList.remove('rouge');
-  document.getElementById("PetitePhrase").innerHTML = " "; 
+  //document.getElementById("PetitePhrase").innerHTML = " "; 
+  document.getElementById("PetitePhrase").classList.add('hidden');
 }
 else {
   LATEMP.classList.add('rouge');
@@ -63,7 +68,8 @@ else {
   LATEMP.classList.remove('vert');
   LATEMP.classList.remove('orange'); 
   document.getElementById("PetitePhrase").innerHTML = "Caliente ! Vamos a la playa, ho hoho hoho !!"; 
+  document.getElementById("PetitePhrase").classList.remove('hidden');
 }
 I_i++ ; 
-}, 2000);
+}, 8000);
 
