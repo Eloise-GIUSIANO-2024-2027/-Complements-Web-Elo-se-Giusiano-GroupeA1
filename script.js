@@ -40,24 +40,29 @@ setInterval(function() {
   LATEMP.classList.remove('orange'); 
   LATEMP.classList.remove('vert');
   LATEMP.classList.remove('rouge');
+  document.getElementById("PetitePhrase").innerHTML = "Brrrrrrr, un peu froid ce matin, mets ta cagoule !"; 
+
 }
 else if (A_Tableau[I_i] < 20){
   LATEMP.classList.add('vert');
   LATEMP.classList.remove('bleu');
   LATEMP.classList.remove('orange');
   LATEMP.classList.remove('rouge');
+  document.getElementById("PetitePhrase").innerHTML = " "; 
 }
 else if (A_Tableau[I_i] < 30){
   LATEMP.classList.add('orange');
   LATEMP.classList.remove('bleu');
   LATEMP.classList.remove('vert');
   LATEMP.classList.remove('rouge');
+  document.getElementById("PetitePhrase").innerHTML = " "; 
 }
 else {
   LATEMP.classList.add('rouge');
   LATEMP.classList.remove('bleu'); 
   LATEMP.classList.remove('vert');
   LATEMP.classList.remove('orange'); 
+  document.getElementById("PetitePhrase").innerHTML = "Caliente ! Vamos a la playa, ho hoho hoho !!"; 
 }
 I_i++ ; 
 }, 2000);
