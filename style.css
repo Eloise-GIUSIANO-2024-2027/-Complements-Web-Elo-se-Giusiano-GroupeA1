@@ -54,6 +54,6 @@
 }
 
 [role="tabpanel"]:focus {
-    border-color: orange;
-    outline: 1px solid orange;
+    border-color: black;
+    outline: 1px solid black;
 }

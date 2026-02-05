@@ -42,7 +42,16 @@ function beauTableau(TABLEAU){
   return S_Rendu;
   }
 
-setInterval(function() {
+var counter = 0;
+
+var looper = setInterval(function() {
+
+  counter++;
+  console.log("Counter is: " + counter);
+  if (counter >= 20)
+  {
+    clearInterval(looper);
+  }
   document.getElementById("temperature2").textContent = A_Tableau[I_i] + " dégrés";
   A_TableauCopie[I_i] = A_Tableau[I_i] ;
   document.getElementById("historique").textContent = beauTableau(A_TableauCopie);
