@@ -7,10 +7,35 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
+  <div class="tabs">
+    <div role="tablist" aria-label="Exemple d'onglets">
+      <button
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-1"
+              id="tab-1"
+              tabindex="0">
+        Premier onglet
+      </button>
+      <button
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-2"
+              id="tab-2"
+              tabindex="-1">
+        Second onglet
+      </button>
+    </div>
+    <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
     <section aria-live="polite" aria-atomic="false">
     <p>La température est :<section id="temperature"></section> </p>
     <p>Non la température est :<br><p id="PetitePhrase" class="hidden" ></p><section id="temperature2" ></section></p>
     </section>
+  </div>
+    <div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+      <p id="historique">Voici les dernières température :</p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
+
